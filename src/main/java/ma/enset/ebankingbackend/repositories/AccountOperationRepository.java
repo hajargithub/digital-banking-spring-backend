@@ -1,7 +1,7 @@
 package ma.enset.ebankingbackend.repositories;
 
-import ma.enset.ebankingbackend.entities.AccountOperation;
-import ma.enset.ebankingbackend.enums.OperationType;
+import ma.enset.ebankingbackend.entities.*;
+import ma.enset.ebankingbackend.enums.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

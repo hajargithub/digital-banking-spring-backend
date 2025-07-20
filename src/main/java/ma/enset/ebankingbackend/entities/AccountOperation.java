@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ma.enset.ebankingbackend.enums.OperationType;
+import ma.enset.ebankingbackend.enums.*;
 
 import java.util.Date;
 @Entity

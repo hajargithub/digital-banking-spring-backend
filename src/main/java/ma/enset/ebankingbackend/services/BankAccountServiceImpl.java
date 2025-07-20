@@ -4,16 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import ma.enset.ebankingbackend.dtos.*;
 import ma.enset.ebankingbackend.entities.*;
-import ma.enset.ebankingbackend.enums.AccountStatus;
-import ma.enset.ebankingbackend.enums.OperationType;
-import ma.enset.ebankingbackend.exceptions.BalanceNotSufficientException;
-import ma.enset.ebankingbackend.exceptions.BankAccountNotFoundException;
-import ma.enset.ebankingbackend.exceptions.CustomerNotFoundException;
-import ma.enset.ebankingbackend.mappers.BankAccountMapperImpl;
-import ma.enset.ebankingbackend.repositories.AccountOperationRepository;
-import ma.enset.ebankingbackend.repositories.BankAccountRepository;
-import ma.enset.ebankingbackend.repositories.CustomerRepository;
-import ma.enset.ebankingbackend.repositories.UserRepository;
+import ma.enset.ebankingbackend.enums.*;
+import ma.enset.ebankingbackend.exceptions.*;
+import ma.enset.ebankingbackend.mappers.*;
+import ma.enset.ebankingbackend.repositories.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -113,8 +107,7 @@ public class BankAccountServiceImpl implements BankAccountService {
     public BankAccountDTO getBankAccountById(String id) throws BankAccountNotFoundException {
         BankAccount bankAccount = bankAccountRepository.findById(id)
                 .orElseThrow(()-> new BankAccountNotFoundException("Bank Account Not Found"));
-        if (bankAccount instanceof SavingAccount) {
-            SavingAccount savingAccount = (SavingAccount) bankAccount;
+        if (bankAccount instanceof SavingAccount savingAccount) {
             return bankAccountMapper.fromSavingAccountToSavingAccountDTO(savingAccount);
         }
         else {
@@ -182,8 +175,7 @@ public class BankAccountServiceImpl implements BankAccountService {
     public List<BankAccountDTO> getAllBankAccounts() {
         List<BankAccount> bankAccounts = bankAccountRepository.findAll();
         List<BankAccountDTO> listAccountDTO = bankAccounts.stream().map(bankAccount -> {
-            if (bankAccount instanceof SavingAccount) {
-                SavingAccount savingAccount = (SavingAccount) bankAccount;
+            if (bankAccount instanceof SavingAccount savingAccount) {
                 return bankAccountMapper.fromSavingAccountToSavingAccountDTO(savingAccount);
             } else {
                 CurrentAccount currentAccount = (CurrentAccount) bankAccount;

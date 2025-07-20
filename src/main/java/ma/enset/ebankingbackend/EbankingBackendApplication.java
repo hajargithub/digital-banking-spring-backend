@@ -106,12 +106,10 @@ public class EbankingBackendApplication {
             System.out.println(bankAccount.getCustomer().getName());
             System.out.println(bankAccount.getStatus());
             System.out.println(bankAccount.getClass().getName());
-            if (bankAccount instanceof CurrentAccount){
-                CurrentAccount currentAccount = (CurrentAccount) bankAccount;
+            if (bankAccount instanceof CurrentAccount currentAccount){
                 System.out.println(currentAccount.getOverdraftLimit());
             }
-            else if (bankAccount instanceof SavingAccount){
-                SavingAccount savingAccount = (SavingAccount) bankAccount;
+            else if (bankAccount instanceof SavingAccount savingAccount){
                 System.out.println(savingAccount.getInterestRate());
             }
             bankAccount.getAccountOperations().forEach(accountOperation -> {

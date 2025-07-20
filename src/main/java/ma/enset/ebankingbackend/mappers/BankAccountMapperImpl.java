@@ -1,13 +1,7 @@
 package ma.enset.ebankingbackend.mappers;
 
-import ma.enset.ebankingbackend.dtos.AccountOperationDTO;
-import ma.enset.ebankingbackend.dtos.CurrentAccountDTO;
-import ma.enset.ebankingbackend.dtos.CustomerDTO;
-import ma.enset.ebankingbackend.dtos.SavingAccountDTO;
-import ma.enset.ebankingbackend.entities.AccountOperation;
-import ma.enset.ebankingbackend.entities.CurrentAccount;
-import ma.enset.ebankingbackend.entities.Customer;
-import ma.enset.ebankingbackend.entities.SavingAccount;
+import ma.enset.ebankingbackend.dtos.*;
+import ma.enset.ebankingbackend.entities.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
