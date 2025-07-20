@@ -1,12 +1,11 @@
-package org.sid.ebankingbackend.entities;
+package ma.enset.ebankingbackend.entities;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import org.sid.ebankingbackend.enums.OperationType;
+import ma.enset.ebankingbackend.enums.OperationType;
 
-import javax.persistence.*;
 import java.util.Date;
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
@@ -20,5 +19,8 @@ public class AccountOperation {
     @ManyToOne
     private BankAccount bankAccount;
     private String description;
+    @ManyToOne
+    private User performedBy;
+    @Column(name = "is_cancelled", nullable = false)
+    private boolean cancelled = false;
 }
-
