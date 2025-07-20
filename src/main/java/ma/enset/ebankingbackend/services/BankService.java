@@ -1,4 +1,4 @@
-package org.sid.ebankingbackend.services;
+package ma.enset.ebankingbackend.services;
 
 import org.sid.ebankingbackend.entities.BankAccount;
 import org.sid.ebankingbackend.entities.CurrentAccount;

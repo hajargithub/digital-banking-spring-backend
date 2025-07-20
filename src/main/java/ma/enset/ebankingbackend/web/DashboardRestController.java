@@ -1,15 +1,11 @@
 package ma.enset.ebankingbackend.web;
 
 import lombok.RequiredArgsConstructor;
-import ma.enset.ebankingbackend.enums.OperationType;
 import ma.enset.ebankingbackend.repositories.AccountOperationRepository;
 import ma.enset.ebankingbackend.services.DashboardService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController

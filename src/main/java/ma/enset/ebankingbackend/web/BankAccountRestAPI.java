@@ -1,8 +1,9 @@
-package org.sid.ebankingbackend.web;
+package ma.enset.ebankingbackend.web;
 
+import ma.enset.ebankingbackend.dtos.TransferRequestDTO;
 import org.sid.ebankingbackend.dtos.*;
-import org.sid.ebankingbackend.exceptions.BalanceNotSufficientException;
-import org.sid.ebankingbackend.exceptions.BankAccountNotFoundException;
+import ma.enset.ebankingbackend.exceptions.BalanceNotSufficientException;
+import ma.enset.ebankingbackend.exceptions.BankAccountNotFoundException;
 import org.sid.ebankingbackend.services.BankAccountService;
 import org.springframework.web.bind.annotation.*;
 

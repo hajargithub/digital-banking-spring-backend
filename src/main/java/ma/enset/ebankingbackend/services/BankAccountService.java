@@ -1,7 +1,6 @@
 package ma.enset.ebankingbackend.services;
 
 import ma.enset.ebankingbackend.dtos.*;
-import ma.enset.ebankingbackend.entities.*;
 import ma.enset.ebankingbackend.enums.AccountStatus;
 import ma.enset.ebankingbackend.exceptions.BalanceNotSufficientException;
 import ma.enset.ebankingbackend.exceptions.BankAccountNotFoundException;

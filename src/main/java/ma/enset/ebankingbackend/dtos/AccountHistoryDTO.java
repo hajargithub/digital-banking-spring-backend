@@ -1,7 +1,6 @@
 package ma.enset.ebankingbackend.dtos;
 
 import lombok.Data;
-import ma.enset.ebankingbackend.entities.AccountOperation;
 import ma.enset.ebankingbackend.enums.AccountStatus;
 
 import java.util.List;

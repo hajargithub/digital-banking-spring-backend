@@ -1,4 +1,4 @@
-package org.sid.ebankingbackend.exceptions;
+package ma.enset.ebankingbackend.exceptions;
 
 public class BalanceNotSufficientException extends Exception {
     public BalanceNotSufficientException(String message) {
