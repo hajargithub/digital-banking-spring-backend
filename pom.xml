@@ -9,10 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ma.enset</groupId>
-    <artifactId>ebanking-backend</artifactId>
+    <artifactId>digital-banking-spring-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>digital-banking-spring
-        -backend</name>
+    <name>digital-banking-spring-backend</name>
     <description>ebanking-backend</description>
     <url/>
     <licenses>
